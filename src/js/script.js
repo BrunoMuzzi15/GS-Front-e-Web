@@ -155,13 +155,7 @@ mostrarPergunta();
 
 mostrarPergunta();
 
-alert("JavaScript carregou!");
 
-
-
-
-
-// JS do site (slideshow etc.)
 (function () {
   const raizShow = document.querySelector('[data-slideshow]');
   if (!raizShow) return;
