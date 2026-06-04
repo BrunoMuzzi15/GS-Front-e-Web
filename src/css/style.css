@@ -60,15 +60,11 @@ section{
 }
 
 #sps {
-    background: linear-gradient(45deg,#1d4a67, #000c49);
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-itens: center;
-    padding: 230px 150px;
-    min-height: 100vh;
+    padding: 5rem 4rem;
+    border-top: 1px solid rgba(0, 180, 255, 0.2);
+    max-width: 1900px;}
     
-}
+
 .sps-texto {
     align-itens: center;
     font-family: 'Orbitron', sans-serif;
@@ -98,15 +94,10 @@ img {
 }
 
 #problema {
-    background: #101638;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-itens: center;
-    padding: 230px 150px;
-    min-height: 100vh;
-    gap: 70px;
-}
+    padding: 5rem 4rem;
+    border-top: 1px solid rgba(0, 180, 255, 0.2);
+    max-width: 1900px;}
+
 .texto-problema {
     align-itens: center;
     font-family: 'Orbitron', sans-serif;
@@ -126,11 +117,10 @@ img {
 }
 
 #tecnologia {
-    background: #121d57;
-    color: white;
-    padding: 100px 150px;
-    min-height: 100vh;
-}
+    padding: 5rem 4rem;
+    border-top: 1px solid rgba(0, 180, 255, 0.2);
+    max-width: 1900px;}
+
 #tecnologia h2{
     font-family: 'Orbitron', sans-serif;
     color: #3292ba;

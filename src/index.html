@@ -67,11 +67,351 @@
         </div>
     </section>
     <section id="objetivos">
+    <style>
+    ::before, ::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    ul, ol { list-style: none; }
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; display: block; }
+
+    :root {
+        --color-bg:        #05103a;
+        --color-bg2:       #071245;
+        --color-bg3:       #0a1a5c;
+        --color-card:      #0d1f6e;
+        --color-card2:     #112280;
+        --color-primary:   #00cfff;
+        --color-secondary: #5b8cff;
+        --color-text:      #ddeeff;
+        --color-muted:     #8aaac8;
+        --color-border:    rgba(0, 180, 255, 0.2);
+        --font-display:    'Orbitron', sans-serif;
+        --font-body:       'Exo 2', sans-serif;
+        --radius:          16px;
+        --transition:      0.3s ease;
+    }
+
+    body {
+        font-family: var(--font-body);
+        background-color: var(--color-bg);
+        color: var(--color-text);
+        line-height: 1.6;
+        min-height: 100vh;
+    }
+
+    body::before {
+        content: '';
+        position: fixed;
+        inset: 0;
+        background-image:
+        radial-gradient(1px 1px at 8%  12%, rgba(255,255,255,0.7) 0%, transparent 100%),
+        radial-gradient(1px 1px at 22% 38%, rgba(255,255,255,0.5) 0%, transparent 100%),
+        radial-gradient(1.5px 1.5px at 37% 68%, rgba(255,255,255,0.6) 0%, transparent 100%),
+        radial-gradient(1px 1px at 53% 18%, rgba(255,255,255,0.4) 0%, transparent 100%),
+        radial-gradient(1px 1px at 68% 53%, rgba(255,255,255,0.7) 0%, transparent 100%),
+        radial-gradient(1.5px 1.5px at 79% 83%, rgba(255,255,255,0.5) 0%, transparent 100%),
+        radial-gradient(1px 1px at 91% 33%, rgba(255,255,255,0.6) 0%, transparent 100%),
+        radial-gradient(1px 1px at 14% 78%, rgba(255,255,255,0.4) 0%, transparent 100%),
+        radial-gradient(1px 1px at 58% 88%, rgba(255,255,255,0.5) 0%, transparent 100%),
+        radial-gradient(1.5px 1.5px at 33% 8%,  rgba(255,255,255,0.8) 0%, transparent 100%),
+        radial-gradient(1px 1px at 71% 10%, rgba(255,255,255,0.3) 0%, transparent 100%),
+        radial-gradient(1px 1px at 86% 58%, rgba(255,255,255,0.5) 0%, transparent 100%),
+        radial-gradient(1px 1px at 4%  53%, rgba(255,255,255,0.4) 0%, transparent 100%),
+        radial-gradient(1.5px 1.5px at 94% 93%, rgba(255,255,255,0.6) 0%, transparent 100%),
+        radial-gradient(1px 1px at 45% 45%, rgba(0,207,255,0.3) 0%, transparent 100%);
+        pointer-events: none;
+        z-index: 0;
+    }
+
+    nav {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem 3rem;
+        background: rgba(5, 16, 58, 0.92);
+        backdrop-filter: blur(12px);
+        border-bottom: 1px solid var(--color-border);
+    }
+
+    .nav-logo {
+        font-family: var(--font-display);
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: var(--color-primary);
+        letter-spacing: 3px;
+    }
+
+    .nav-links {
+        display: flex;
+        gap: 2.5rem;
+    }
+
+    .nav-links a {
+        font-family: var(--font-display);
+        font-size: 0.72rem;
+        letter-spacing: 1px;
+        color: var(--color-text);
+        text-transform: capitalize;
+        transition: color var(--transition);
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+        color: var(--color-primary);
+    }
+
+    #objetivos {
+        padding: 5rem 4rem;
+        border-top: 1px solid rgba(0, 180, 255, 0.2);
+        max-width: 1900px;}
+    
+
+    .section-title {
+        font-family: var(--font-display);
+        font-size: clamp(2rem, 5vw, 3.2rem);
+        font-weight: 900;
+        letter-spacing: 4px;
+        color: var(--color-primary);
+        text-transform: uppercase;
+        margin-bottom: 0.6rem;
+    }
+
+    .section-sub {
+        font-size: 1rem;
+        color: var(--color-muted);
+        margin-bottom: 3rem;
+        max-width: 520px;
+    }
+
+    .objetivo-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .objetivo-card {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+        background: var(--color-card);
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius);
+        padding: 1.4rem 1.8rem;
+        transition: background var(--transition), border-color var(--transition), transform var(--transition);
+    }
+
+    .objetivo-card:hover {
+        background: var(--color-card2);
+        border-color: rgba(0, 207, 255, 0.45);
+        transform: translateX(8px);
+    }
+
+    .objetivo-num {
+        font-family: var(--font-display);
+        font-size: 1.6rem;
+        font-weight: 900;
+        color: var(--color-primary);
+        opacity: 0.3;
+        min-width: 2.5rem;
+        line-height: 1;
+    }
+
+    .objetivo-icon {
+        width: 52px;
+        height: 52px;
+        min-width: 52px;
+        border-radius: var(--radius);
+        background: rgba(0, 207, 255, 0.1);
+        border: 1px solid rgba(0, 207, 255, 0.25);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+    }
+
+    .objetivo-body h4 {
+        font-family: var(--font-display);
+        font-size: 0.82rem;
+        letter-spacing: 1px;
+        color: var(--color-primary);
+        margin-bottom: 0.3rem;
+        text-transform: uppercase;
+    }
+
+    .objetivo-body p {
+        font-size: 0.9rem;
+        color: var(--color-muted);
+    }
+
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: var(--color-bg); }
+    ::-webkit-scrollbar-thumb { background: var(--color-secondary); border-radius: 3px; }
+    </style>
+</head>
+<body>
+
+
+
+
+    <section id="objetivos">
+    <h2 class="section-title">Objetivos</h2>
+    <p class="section-sub">Transformar a navegação orbital em um processo seguro, eficiente e acessível para toda a humanidade.</p>
+
+    <ul class="objetivo-grid">
+
+    <li class="objetivo-card">
+        <span class="objetivo-num">01</span>
+        <div class="objetivo-icon" aria-hidden="true">🛡️</div>
+        <div class="objetivo-body">
+        <h4>Prevenir Colisões Orbitais</h4>
+        <p>Detectar e desviar trajetórias de risco antes que se tornem incidentes.</p>
+        </div>
+    </li>
+
+    <li class="objetivo-card">
+        <span class="objetivo-num">02</span>
+        <div class="objetivo-icon" aria-hidden="true">🗺️</div>
+        <div class="objetivo-body">
+    <h4>Otimizar Rotas Espaciais</h4>
+        <p>Calcular trajetos de menor risco com consumo eficiente de combustível.</p>
+        </div>
+    </li>
+
+    <li class="objetivo-card">
+        <span class="objetivo-num">03</span>
+        <div class="objetivo-icon" aria-hidden="true">📡</div>
+        <div class="objetivo-body">
+        <h4>Monitoramento Contínuo</h4>
+        <p>Rastrear em tempo real todos os objetos presentes nas órbitas terrestres.</p>
+        </div>
+    </li>
+
+    <li class="objetivo-card">
+        <span class="objetivo-num">04</span>
+        <div class="objetivo-icon" aria-hidden="true">🌍</div>
+        <div class="objetivo-body">
+    <h4>Democratizar o Acesso</h4>
+        <p>Disponibilizar a plataforma para agências espaciais e empresas privadas.</p>
+        </div>
+    </li>
+
+    <li class="objetivo-card">
+        <span class="objetivo-num">05</span>
+        <div class="objetivo-icon" aria-hidden="true">🛰️</div>
+        <div class="objetivo-body">
+    <h4>Proteger Infraestrutura Crítica</h4>
+        <p>Garantir a integridade de satélites de comunicação, GPS e meteorologia.</p>
+        </div>
+    </li>
+
+    </ul>
+    </section>
+
+</body>
+</html>
 
     </section>
     <section id="publico">
+    <style>
+        #publico {
+    padding: 5rem 4rem;
+    border-top: 1px solid rgba(0, 180, 255, 0.2);
+    max-width: 1900px;}
+        
+        #publico h2 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: clamp(2rem, 5vw, 3.2rem);
+            font-weight: 900;
+            letter-spacing: 4px;
+            color: #00cfff;
+            text-transform: uppercase;
+            margin-bottom: 0.6rem;
+        }
+
+        #publico .pub-sub {
+            font-size: 1rem;
+            color: #8aaac8;
+            margin-bottom: 3rem;
+            max-width: 520px;
+        }
+
+        .publico-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.2rem;
+            list-style: none;
+            padding: 0;
+        }
+
+        .publico-card {
+            flex: 1 1 220px;
+            background: #0d1f6e;
+            border: 1px solid rgba(0, 180, 255, 0.2);
+            border-radius: 16px;
+            padding: 2rem 1.5rem;
+            text-align: center;
+            transition: background 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .publico-card:hover {
+            background: #112280;
+            border-color: rgba(0, 207, 255, 0.45);
+            transform: translateY(-6px);
+        }
+
+        .publico-card .pub-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .publico-card h3 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.78rem;
+            letter-spacing: 1px;
+            color: #00cfff;
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+        }
+
+        .publico-card p {
+            font-size: 0.88rem;
+            color: #8aaac8;
+            margin: 0;
+        }
+    </style>
+
+    <h2>PÚBLICO-ALVO</h2>
+    <p class="pub-sub">Todos que dependem de operações orbitais seguras e confiáveis.</p>
+
+    <ul class="publico-grid">
+        <li class="publico-card">
+            <span class="pub-icon" aria-hidden="true">👨‍🚀</span>
+            <h3>Astronautas</h3>
+            <p>Tripulações em missões espaciais que dependem de rotas seguras.</p>
+        </li>
+        <li class="publico-card">
+            <span class="pub-icon" aria-hidden="true">🏛️</span>
+            <h3>Agências Espaciais</h3>
+            <p>NASA, ESA, AEB e outras agências que operam missões ao redor do globo.</p>
+        </li>
+        <li class="publico-card">
+            <span class="pub-icon" aria-hidden="true">🔧</span>
+            <h3>Engenheiros de Missão</h3>
+            <p>Profissionais responsáveis pelo planejamento e controle de trajetórias.</p>
+        </li>
+        <li class="publico-card">
+            <span class="pub-icon" aria-hidden="true">🚀</span>
+            <h3>Empresas Privadas</h3>
+            <p>SpaceX, Blue Origin e startups do setor NewSpace com frotas de satélites.</p>
+        </li>
+    </ul>
 
     </section>
+    
     <section id="beneficios">
 
     </section>
@@ -81,6 +421,15 @@
     <footer>
 
     </footer>
-   
+
 </body>
+
+
 </html>
+
+
+
+
+
+
+
