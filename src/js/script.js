@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 const perguntas = [
 {
     pergunta: "Qual é a principal função do sistema de posicionamento espacial?",
@@ -156,7 +156,7 @@ mostrarPergunta();
 mostrarPergunta();
 
 alert("JavaScript carregou!");
-=======
+
 
 
 
@@ -210,4 +210,3 @@ alert("JavaScript carregou!");
 
 })();
 
->>>>>>> a877816659b2bb9dfddc221d8634bfb9f91b5243
