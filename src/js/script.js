@@ -1,8 +1,12 @@
 
 
+
+
+// JS do site (slideshow etc.)
 (function () {
   const raizShow = document.querySelector('[data-slideshow]');
   if (!raizShow) return;
+
 
   const imagens = Array.from(raizShow.querySelectorAll('.problema-slide'));
   const botaoAnterior = raizShow.querySelector('.problema-prev');
