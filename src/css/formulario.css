@@ -1,0 +1,33 @@
+/* Estilos para o formulário de cadastro */
+
+.cadastro {
+  padding: 2rem 0;
+  background: rgba(5, 16, 58, 0.35);
+}
+
+.cadastro-container {
+  width: min(900px, 92vw);
+  margin: 0 auto;
+}
+
+.cadastro-card {
+  background: rgba(13, 31, 110, 0.85);
+  border: 1px solid rgba(0, 207, 255, 0.25);
+  border-radius: 18px;
+  padding: 2rem;
+}
+
+.cadastro-subtitulo {
+  color: #4b92ff;
+  letter-spacing: 4px;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.cadastro h2 {
+  color: #69a7ff;
+  font-size: 2.2rem;
+  margin: 0.6rem 0 0.8rem;
+  font-family: 'Orbitron', sans-serif;
+}
+

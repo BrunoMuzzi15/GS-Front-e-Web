@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/formulario.css">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&display=swap" rel="stylesheet">
     <title>SPS</title>
 </head>
@@ -37,7 +38,22 @@
         <img src="imgs/sps.png" alt="SPS">
     </section>
     <section id="problema">
-        <img src="imgs/orbita-congestionada.png" alt="Desastre">
+        <div class="problema-slideshow" data-slideshow>
+            <div class="problema-slides">
+                <img class="problema-slide" src="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa" alt="Órbita congestionada" >
+                <img class="problema-slide" src="https://images.unsplash.com/photo-1462331940025-496dfbfc7564" alt="Sistema SPS" >
+                <img class="problema-slide" src="https://images.unsplash.com/photo-1451187580459-43490279c0fa" alt="Terra vista do espaço" >
+            </div>
+
+            <button class="problema-nav problema-prev" type="button" >&#10094;</button>
+            <button class="problema-nav problema-next" type="button" >&#10095;</button>
+
+            <div class="problema-dots">
+                <button class="problema-dot" type="button" ></button>
+                <button class="problema-dot" type="button" ></button>
+                <button class="problema-dot" type="button" ></button>
+            </div>
+        </div>
 
         <div class="texto-problema">
             <h2>O PROBLEMA</h2>
@@ -347,6 +363,36 @@
             Navegação orbital inteligente para o futuro das missões-especiais
         </p>
 
+        <section id="cadastro" class="cadastro">
+        <div class="cadastro-container">
+            <div class="cadastro-card">
+                <span class="cadastro-subtitulo">CADASTRO</span>
+                <h2>Digite seu nome e e-mail</h2>
+                <strong class="cadastro-desc">Se quiser receber atualizações sobre o sistema SPS cadastre-se logo abaixo.</strong>
+
+                <form data-form id="form-cadastro" novalidate>
+                    <div class="form-field">
+                        <label for="nome">Nome</label>
+                        <input id="nome" name="nome" type="text" data-campo-nome autocomplete="name" />
+                        <div class="form-erro" data-erro-nome></div>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="email">E-mail</label>
+                        <input id="email" name="email" type="email" data-campo-email autocomplete="email" />
+                        <div class="form-erro" data-erro-email></div>
+                    </div>
+
+                    <div class="form-aviso" data-aviso aria-live="polite"></div>
+
+                    <div class="form-actions">
+                        <button data-botao-enviar type="submit">Enviar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
         <h3>EQUIPE DE DESENVOLVIMENTO</h3>
 
         <div class="equipe">
@@ -361,6 +407,8 @@
 
     </footer>
 
+    <script src="js/script.js"></script>
+    <script src="js/formulario.js"></script>
 </body>
 
 
