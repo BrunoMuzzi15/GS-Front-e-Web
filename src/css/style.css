@@ -170,3 +170,255 @@ img {
     border-color: #4da6ff;
     box-shadow: 0 0 30px rgba(77,166,255,0.3);
 }
+.beneficios {
+    background: #071538;
+    min-height: 100vh;
+    padding: 80px 8%;
+}
+
+.beneficios-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 70px;
+}
+
+.beneficios-imagem img {
+    width: 700px;
+    border-radius: 20px;
+    box-shadow: 0 0 40px rgba(0, 102, 255, 0.4);
+}
+
+.beneficios-conteudo {
+    max-width: 700px;
+}
+
+.subtitulo {
+    color: #4b92ff;
+    font-size: 1rem;
+    letter-spacing: 4px;
+    font-weight: 600;
+}
+
+.beneficios-conteudo h2 {
+    font-size: 4rem;
+    color: #69a7ff;
+    margin: 20px 0 50px;
+    font-family: "Orbitron", sans-serif;
+}
+
+.cards-beneficios {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.card {
+    background: #1a2946;
+    border: 1px solid rgba(90, 145, 255, 0.25);
+    border-radius: 20px;
+    padding: 35px;
+    transition: .3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    border-color: #5f9fff;
+    box-shadow: 0 0 25px rgba(95, 159, 255, 0.35);
+}
+
+
+
+.card p {
+    color: #fff;
+    font-size: 1.4rem;
+    line-height: 1.7;
+}
+
+.card-largo {
+    grid-column: span 2;
+}
+
+@media(max-width: 1200px) {
+
+    .beneficios-container {
+        flex-direction: column;
+    }
+
+    .beneficios-imagem img {
+        width: 100%;
+        max-width: 700px;
+    }
+
+    .beneficios-conteudo h2 {
+        font-size: 3rem;
+    }
+
+    .cards-beneficios {
+        grid-template-columns: 1fr;
+    }
+
+    .card-largo {
+        grid-column: span 1;
+    }
+}
+#beneficios{
+    background: linear-gradient(
+        180deg,
+        #121d57 0%,
+        #071538 100%
+    );
+}
+#aplicacao{
+    background: linear-gradient(
+        180deg,
+        #121d57 0%,
+        #071538 100%
+    );
+}
+
+.aplicacao-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 70px;
+}
+
+.aplicacao-info {
+    flex: 1;
+}
+
+.aplicacao-info .subtitulo {
+    color: #4b92ff;
+    letter-spacing: 4px;
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.aplicacao-info h2 {
+    color: #69a7ff;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 4rem;
+    margin: 25px 0 50px;
+    max-width: 650px;
+}
+
+.cards-aplicacao {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.card-aplicacao {
+    background: #1a2946;
+    border: 1px solid rgba(90,145,255,.25);
+    border-radius: 20px;
+    padding: 35px;
+    transition: .3s;
+}
+
+.card-aplicacao:hover {
+    transform: translateY(-8px);
+    border-color: #5f9fff;
+    box-shadow: 0 0 25px rgba(95,159,255,.35);
+}
+.card-aplicacao h3 {
+    color: white;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    font-family: 'Inter', sans-serif;
+}
+
+.card-aplicacao p {
+    color: #d7d7d7;
+    font-size: 1.2rem;
+    line-height: 1.8;
+}
+
+.card-grande {
+    grid-column: span 2;
+}
+
+.aplicacao-imagem img {
+    width: 650px;
+    border-radius: 20px;
+    box-shadow: 0 0 40px rgba(0,102,255,.4);
+}
+
+@media (max-width: 1200px) {
+
+    .aplicacao-container {
+        flex-direction: column;
+    }
+
+    .aplicacao-imagem img {
+        width: 100%;
+        max-width: 650px;
+    }
+
+    .aplicacao-info h2 {
+        font-size: 3rem;
+    }
+
+    .cards-aplicacao {
+        grid-template-columns: 1fr;
+    }
+
+    .card-grande {
+        grid-column: span 1;
+    }
+}
+
+#footer {
+    background: #020a2d;
+    min-height: 60vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 80px 20px;
+}
+
+#footer h2 {
+    font-family: 'Orbitron', sans-serif;
+    color: #69a7ff;
+    font-size: 3rem;
+    margin-bottom: 30px;
+}
+
+#footer .slogan {
+    color: #ffffff;
+    font-size: 2rem;
+    margin-bottom: 80px;
+}
+
+#footer h3 {
+    font-family: 'Orbitron', sans-serif;
+    color: #3f8cff;
+    letter-spacing: 4px;
+    font-size: 1.3rem;
+    margin-bottom: 40px;
+}
+
+.equipe {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.equipe p {
+    color: white;
+    font-size: 2rem;
+}
+
+.copyright {
+    color: white;
+    margin-top: 80px;
+    font-size: 1.3rem;
+}
+
