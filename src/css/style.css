@@ -394,7 +394,6 @@ img {
     font-size: 1.3rem;
     margin-bottom: 40px;
 }
-
 #objetivos {
         padding: 5rem 4rem;
         border-top: 1px solid rgba(0, 180, 255, 0.2);
@@ -548,6 +547,58 @@ img {
             color: #8aaac8;
             margin: 0;
         }
+
+      #quiz {
+    max-width: 700px;
+    margin: 50px auto;
+    padding: 30px;
+    background: rgba(15, 35, 80, 0.9);
+    border-radius: 20px;
+    box-shadow: 0 0 25px rgba(0, 170, 255, 0.3);
+    text-align: center;
+}
+
+#quiz h2 {
+    color: #ffffff;
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+
+#quiz-area h3 {
+    color: #ffffff;
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+.opcao {
+    width: 90%;
+    max-width: 500px;
+    padding: 15px;
+    margin: 12px 0;
+    border: none;
+    border-radius: 12px;
+    background: #234b7c;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.opcao:hover {
+    background: #2f6cb3;
+    transform: scale(1.03);
+    box-shadow: 0 0 15px rgba(0, 170, 255, 0.5);
+}
+
+#quiz button {
+    font-family: inherit;
+}
+
+#quiz p {
+    font-size: 1.2rem;
+    margin: 20px 0;
+}  
 
 .equipe {
     display: flex;
