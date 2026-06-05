@@ -137,14 +137,14 @@ if (perguntaAtual < perguntas.length) {
 }
 
 function mostrarResultado() {
-areaQuiz.innerHTML = `
-    <h2>Quiz Finalizado!</h2>
-    <p>Você acertou ${pontuacao} de ${perguntas.length} perguntas.</p>
+    areaQuiz.innerHTML = `
+        <h2>Quiz Finalizado!</h2>
+        <p>Você acertou ${pontuacao} de ${perguntas.length} perguntas.</p>
 
-    <button onclick="reiniciarQuiz()">
-    Tentar novamente
-    </button>
-`;
+        <button onclick="reiniciarQuiz()">
+        Tentar novamente
+        </button>
+    `;
 }
 
 function reiniciarQuiz() {
@@ -199,8 +199,25 @@ mostrarPergunta();
     marcador.addEventListener('click', () => definirAtivo(i));
   });
 
-
+  definirAtivo(0);
 
 
 })();
 
+function temaAzul() {
+  const bg = "linear-gradient(45deg,#00153d,#0b2f75)";
+  document.body.style.background = bg;
+  document.querySelectorAll("section").forEach(s => s.style.background = bg);
+}
+
+function temaRoxo() {
+  const bg = "linear-gradient(45deg,#1c0038,#5b1fa6)";
+  document.body.style.background = bg;
+  document.querySelectorAll("section").forEach(s => s.style.background = bg);
+}
+
+function temaPreto() {
+  const bg = "linear-gradient(45deg, #000000, #121212)";
+  document.body.style.background = bg;
+  document.querySelectorAll("section").forEach(s => s.style.background = bg);
+}
